@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/normalize.css">
+    <link rel="stylesheet" href="tercers/bootstrap-5.0.2-dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="//use.fontawesome.com/releases/v5.0.7/css/all.css">
+    <title>Document</title>
+</head>
+<body class="cuerpo" onload="cambiarColor()">
+    <header class="cabecera">
+        <img src="media/imagenes/pantalla-de-portatil.png">
+        <h3>Eventos</h3>
+    </header>
+
+    <div class="container bg-light d-flex justify-content-center align-items-center mt-5 p-5">
+        <p id="textoSaludo" class="fw-bold m-0">Hello! Click me!</p>
+    </div>
+
+    <div class="container bg-light d-flex justify-content-center align-items-center mt-5 p-5">
+        <div class="row align-items-center w-100">
+            <div class="col d-flex justify-content-center align-items-center">
+                <img id="imagen" onclick="hanHechoClick(imagen)" src="media/imagenes/liverpoolTeam1.jpeg" width="250" height="150">
+            </div>
+            <div onclick id="textoImagen" class="col d-flex justify-content-center align-items-center">
+                <button id="btnText" onclick="hanHechoClick(btnText)" class="btn fw-bold shadow-none">Click me or click the image!</button>
+            </div>
+        </div>
+    </div>
+
+    <div class="container bg-light d-flex flex-column justify-content-center align-items-center mt-5 p-5">
+        <div class="container-fluid d-flex justify-content-end p-2">
+            <button type="button" class="btn shadow-none" data-bs-toggle="modal" data-bs-target="#exampleModal">
+                <img id="btnAgregar" src="media/imagenes/add-user.png" width="35" height="35">
+            </button>
+        </div>
+
+        <div class="modal vertical-align-center fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalLabel">Add player</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <form action="" class="d-block">
+                        <div class="mb-3 row">
+                            <div class="col-sm-10">
+                                <input type="text" name="nombreJugador" class="form-control" id="nombreJugador" placeholder="Name and surname..." maxlength="50">
+                            </div>
+                        </div>
+
+                        <div class="mb-3 row">
+                            <div class="col-sm-10">
+                                <input type="text" name="edad" class="form-control" id="edad" placeholder="Age..." maxlength="3">
+                            </div>
+                        </div>
+
+                        <div class="mb-3 row">
+                            <div class="col-sm-10">
+                                <input type="text" name="equipo" class="form-control" id="equipo" placeholder="Equipo..." maxlength="60">
+                            </div>
+                        </div>
+                    </form>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                    <button onclick="agregarFila()" type="button" class="btn btn-primary" data-bs-dismiss="modal">Save changes</button>
+                </div>
+                </div>
+            </div>
+        </div>
+
+        <table id="tablaJugadores" class="table bg-dark">
+            <thead class="text-white">
+                <tr>
+                    <th scope="col">Name</th>
+                    <th scope="col">Age</th>
+                    <th scope="col">Team</th>
+                </tr>
+            </thead>
+            <tbody class="bg-light overflow-scroll">
+                <tr class="unselected" style="cursor: pointer;">
+                    <td>Messi</td>
+                    <td>34</td>
+                    <td>Paris Saint-Germain F.C.</td>
+                </tr>
+                <tr class="unselected" style="cursor: pointer;">
+                    <td>Alex Oxlade-Chamberlain</td>
+                    <td>28</td>
+                    <td>Liverpool F.C.</td>
+                </tr>
+                <tr class="unselected" style="cursor: pointer;">
+                    <td>Ferran Torres</td>
+                    <td>21</td>
+                    <td>F.C. Barcelona</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+
+    <div class="santa"></div>
+
+    <script src="js/script.js"></script>
+    <script src="tercers/bootstrap-5.0.2-dist/js/bootstrap.min.js"></script>
+</body onload="cambiarColor()">
+</html>

@@ -1,0 +1,128 @@
+*
+{
+    font-family: monospace, Consolas;
+}
+
+html
+{
+    width: 100%;
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    border: 0;
+    outline: 0;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    left: 0;
+}
+
+.cuerpo
+{
+    width: 100%;
+    height: 100%;
+    padding: 0;
+    margin: 0;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    left: 0;
+    display: block;
+}
+
+.cabecera
+{
+    width: 100%;
+    height: 75px;
+    margin: 0px;
+    padding: 0px;
+    background: linear-gradient(to right, black 5%, purple 200%);
+    display: flex;
+    align-items: center;
+    padding-left: 50px;
+    box-shadow: 0 0 5px black;
+}
+
+.cabecera h3
+{
+    color: white;
+    font-family: Consolas;
+    font-size: 30px;
+    padding-left: 25px;
+    padding-top: 8px;
+}
+
+.cabecera img
+{
+    width: 50px;
+    height: 50px;
+}
+
+.proyectos
+{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+#textoSaludo:hover
+{
+    cursor: pointer;
+    transform: scale(1.05);
+}
+
+#imagen:hover
+{
+    cursor: pointer;
+    transform: scale(1.05);
+}
+
+#textoImagen:hover
+{
+    cursor: pointer;
+    transform: scale(1.05);
+}
+
+#btnAgregar:hover
+{
+    cursor: pointer;
+    transform: scale(1.05);
+}
+
+.highlight 
+{
+    background-color: darkturquoise;
+}
+
+.santa
+{
+    width: 300px;
+    height: 300px;
+    position: fixed;
+    bottom: 10%;
+    left: -50%;
+    background: url("../media/imagenes/santaClaus.png");
+    background-position: center;
+    background-size: contain;
+    background-repeat: no-repeat;
+}
+
+.animationSanta
+{
+    animation: movimientoSanta 5s linear infinite;
+}
+
+@keyframes movimientoSanta
+{
+    0%
+    {
+        left: -50%;
+    }
+    100%
+    {
+        left: 200%;
+        bottom: 50%;
+    }
+}
